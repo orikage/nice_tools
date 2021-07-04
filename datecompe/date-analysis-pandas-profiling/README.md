@@ -1,4 +1,4 @@
-# how dir
+# dir
  
 ```dir
 
