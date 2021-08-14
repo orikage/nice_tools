@@ -10,5 +10,12 @@
 // ==/UserScript==
 
 window.onload = function(){
-    window.open().location.href = document.querySelector("#rendered-kernel-content").getAttribute("src")
+    try{
+    document.querySelector("#rendered-kernel-content").getAttribute("src");
+    history.back();
+    window.open().location.href = document.querySelector("#rendered-kernel-content").getAttribute("src");
+    }
+    catch(error){
+    window.close();
+    }
 }
